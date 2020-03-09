@@ -1,0 +1,656 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #524c61;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 70% 15%;
+      grid-template-columns: 15% 70% 15%;
+  -ms-grid-rows: 55vh auto;
+      grid-template-rows: 55vh auto;
+      grid-template-areas: 'hd hd hd';
+}
+
+#backImage {
+  background-image: url("../images/esB.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: hd;
+}
+
+#busqueda {
+  width: 100%;
+  height: 100%;
+}
+
+.generalBusqueda {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+}
+
+.tituloBusqueda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.OpcionesVerdaderas {
+  width: 100%;
+  padding-top: 1.5%;
+}
+
+.contBusqueda {
+  width: 100%;
+  padding: 1% 2% 2% 2%;
+  border-radius: 6px;
+  background-color: white;
+  max-height: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contBusqueda h1 {
+  font-weight: 400;
+  font-size: 2.7em;
+  line-height: 1.2;
+  margin: 0 0 .5em;
+}
+
+.opcionesBusqueda {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.opcionesBusqueda input[type="radio"] {
+  display: none;
+}
+
+.opcion {
+  width: 20%;
+}
+
+.opcion label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0;
+}
+
+.opcion span {
+  font-size: 1.2em;
+  margin-left: 2%;
+  color: #817b8f;
+}
+
+.form {
+  border-radius: 10px;
+}
+
+.formBusqueda {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.opcionesLugares {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 420px;
+          flex: 1 1 420px;
+}
+
+.opcionesVarias {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 210px;
+}
+
+.inputLugares {
+  width: 40%;
+}
+
+.inputFechas {
+  width: 39%;
+}
+
+.inputPAsajeros {
+  width: 100%;
+}
+
+.inputPasajeros-Mobile {
+  display: none;
+}
+
+.containerFechas {
+  width: 100%;
+  height: 100%;
+}
+
+.cuadroFechas {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.cuadroFechas .arrow {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cuadroFechas .arrow svg {
+  width: 24px;
+  fill: #817b8f;
+}
+
+.inputIdaYVuelta, .inputIdaYVuelta2 {
+  width: 42%;
+  height: 100%;
+}
+
+.inputIdaYVuelta input, .inputIdaYVuelta2 input {
+  border: 0;
+}
+
+.flatpickr-inputRange {
+  padding-left: 10%;
+}
+
+#secondRangeInput {
+  margin-left: 10%;
+}
+
+.inputsearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 8%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 0.2%;
+}
+
+.searchButton {
+  border: 0;
+  background-color: #d32f2f;
+  width: 100%;
+  height: 70%;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  font-size: 1.6em;
+}
+
+.pasaContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+  text-align: -webkit-left;
+  padding-bottom: 0.8em;
+  white-space: nowrap;
+}
+
+.pasaContainer .cantPasajeroslabel {
+  font-size: 1.2em;
+  color: #524c61;
+  margin-bottom: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 2.5em;
+  letter-spacing: 0.1em;
+}
+
+.pasaContainer .cantPasajeros {
+  width: 100%;
+  height: 3.6em;
+  position: relative;
+}
+
+.pasaContainer .cantPasajeros::before {
+  content: "\2C6";
+  position: absolute;
+  right: 0.5em;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1;
+  color: #2196f3;
+  pointer-events: none;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.OpcionesVerdaderas, .containerFechas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inputLugares, .inputFechas, .inputPAsajeros {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formBusqueda {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.opcion, .cuadroFechas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#busqueda, .generalBusqueda, .contBusqueda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.opcionesBusqueda, .opcion label, .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.opcionesLugares, .opcionesVarias {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.opcionesBusqueda input[type="radio"] + .labelBefore::before {
+  content: "";
+  background: #fff;
+  border-radius: 100%;
+  border: 2px solid #817b8f;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.opcionesBusqueda input[type="radio"]:checked + .labelBefore::before {
+  background-color: #2196f3;
+  -webkit-box-shadow: inset 0 0 0 2px #fff;
+          box-shadow: inset 0 0 0 2px #fff;
+  border: 2px solid #2196f3;
+}
+
+.modal {
+  z-index: 999;
+  display: none;
+  /* Hidden by default */
+  background-color: white;
+  width: 100%;
+  /* Full width */
+  padding: 0.5em 1em;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+  pointer-events: auto;
+}
+
+.inputLugares, .inputFechas, .inputPAsajeros {
+  background-color: white;
+  padding: 0% 2% 0 0;
+  border-radius: 9px;
+  margin-right: 0.2%;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5%;
+  font-size: 1.6em;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+label {
+  font-size: 1.2em;
+  color: grey;
+  margin-bottom: 0.5em;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #817b8f;
+  font-size: 1.6em;
+  padding: 2%;
+  border-radius: 0.6em;
+  color: #817b8f;
+  outline: none;
+  -webkit-appearance: button;
+  overflow: hidden;
+  line-height: 1.15;
+}
+
+select option {
+  font-size: 1em;
+}
+
+@media screen and (min-device-width: 320px) and (max-width: 568px) {
+  body {
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  #backImage {
+    background-image: none;
+  }
+  .contBusqueda {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tituloBusqueda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    min-height: 5.6em;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .tituloBusqueda h1 {
+    font-size: 2.4em;
+    font-weight: 300;
+    color: #817b8f;
+  }
+  .OpcionesVerdaderas {
+    max-width: 500px;
+    padding: 1.8em 1.2em;
+  }
+  .OpcionesVerdaderas .opcion {
+    width: 40%;
+  }
+  .opcionesBusqueda {
+    width: 100%;
+  }
+  .formBusqueda {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .labelBefore {
+    font-size: 1em;
+  }
+  .opcionesLugares {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  .opcionesVarias {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    max-width: 100%;
+  }
+  .inputFechas {
+    width: 100%;
+  }
+  .inputLugares, .containerFechas {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1.5em;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .inputLugares input, .containerFechas input {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+    padding: 0.6em;
+    font-size: 1.6em;
+    -ms-flex-preferred-size: 73%;
+        flex-basis: 73%;
+  }
+  .inputLugares label, .containerFechas label {
+    padding-right: 1em;
+    font-size: 1.3em;
+  }
+  .cuadroFechas {
+    width: 73%;
+    height: auto;
+  }
+  .inputPAsajeros {
+    display: none;
+  }
+  .inputPasajeros-Mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1.5em 0;
+  }
+  .inputPasajeros-Mobile label {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 10% 3% 3% 3%;
+  }
+  .modal-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .datosPasajeros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 77%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .datosPasajeros .cantPasajeroslabel {
+    font-size: 1.1em;
+    letter-spacing: 0;
+  }
+  .datosPasajeros select {
+    width: 92%;
+    height: 2.25em;
+    padding: 0.5em;
+  }
+  .inputsearch {
+    width: 100%;
+  }
+  .inputsearch .searchButton {
+    padding: 1em;
+    height: 100%;
+  }
+  .claseContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .containerGeneralOP {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .containerGeneralOP .opcionesClases {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 75%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1.5em 0;
+  }
+  .containerGeneralOP .opcionesClases label {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1279px) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 5vh;
+  }
+  .inputLugares {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1279px) and (max-width: 1919px) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 10vh;
+  }
+}
+
+@media (min-width: 1919px) and (max-width: 1921px) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 7vh;
+  }
+}
+
+@media (min-width: 1922px) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 3vh;
+  }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1279px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 8vh;
+  }
+}
+
+@media only screen and (min-width: 1279px) and (max-width: 1919px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .inputLugares, .inputFechas, .inputPAsajeros {
+    height: 7vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
