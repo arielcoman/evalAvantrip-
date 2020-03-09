@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height shrink-to-fit=no"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- Js del dateragepicker modificados  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	<!-- Jquery  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+<!--  Flatpickr  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/plugins/rangePlugin.js"></script>
+	
+
+	
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+	<title>Evaluación Avantrip</title>
+</head>
+<body>
+<!-- Aca va la imagen de NY y los input de busqueda -->
+	<div id="backImage">
+		<div id="busqueda">
+			<div class="generalBusqueda">
+			<!-- contendor de busqueda -->
+				<div class="contBusqueda">
+					<div class="tituloBusqueda">
+						<h1>Buscá tu vuelo</h1>	
+					</div>
+					<div class="OpcionesVerdaderas">
+					<!-- opciones de busqqueda -->
+						<div class="opcionesBusqueda">
+							<div class="opcion">
+								<input  id="i1" class="botonIdaYVuelta"  type="radio" checked>
+								<label for="i1" class="labelBefore" >	
+								<span>Ida y Vuelta</span>
+								</label>
+							</div>
+							<div class="opcion">
+								<input id="i2"  class="btnSoloIda"  type="radio" >
+								<label for="i2" class="labelBefore">
+									<span>Solo Ida</span>
+								</label>							
+							</div>
+									
+						</div>
+						<div class="form">
+							<form class="formBusqueda">							
+								<div class="opcionesLugares">
+									<!-- Origen -->
+									<div class="inputLugares">
+										<label>Desde</label>
+										<input type="text" placeholder="Ingresa de donde salis..."/>
+									</div>
+									<!-- Destino -->
+									<div class="inputLugares">
+										<label>Hacia</label>
+										<input type="text" placeholder="Ej: Miami"/>
+									</div>	
+									<div class="inputFechas">
+										<div class="containerFechas">
+											<label>Fechas</label>
+											<div class="cuadroFechas">
+												<div class="inputIdaYVuelta">
+													<input type="text" class="inputRange" placeholder="Partida"/>
+													<input type="text" class="inputSoloIda" style="display: none" placeholder="Partida"/>
+												</div>
+												<div class="arrow">
+													<svg viewBox="0 0 1000 1000"> <path d="M694.4 242.4l249.1 249.1c11 11 11 21 0 32L694.4 772.7c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210.1-210.1H67.1c-13 0-23-10-23-23s10-23 23-23h805.4L662.4 274.5c-21-21.1 11-53.1 32-32.1z"></path> </svg>
+												</div>
+												<div class="inputIdaYVuelta2">
+													<input type="text" id="secondRangeInput" data-fp-omit="" readonly="readonly" placeholder="Regreso">
+												</div>	
+												
+											</div>
+										</div>
+									</div>
+								</div> 
+								<div class="opcionesVarias">
+								<!-- DateRangePicker -->
+									
+									<div class="inputPAsajeros">
+										<label>Pasajeros y clase</label>
+										<input class="inputPasajerosyClase dropdown-toggle" data-target="#loginmodal" data-toggle="modal" aria-haspopup="true" aria-expanded="false" placeholder="1 Pasajero, Económica">
+										<div class="modal" id="loginmodal" tabindex="-1">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="datosPasajeros">
+														<div class="pasaContainer">
+															<div class="cantPasajeroslabel">
+															Adultos (+11)
+															</div>
+															<div class="cantPasajeros">
+															<select name="Pasajeros" id="mayores">
+																<option selected value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+																<option value="6">6</option>
+																<option value="7">7</option> 
+																<option value="8">8</option> 
+																<option value="9">9</option>
+															</select>
+															</div>
+														</div>
+														<div class="pasaContainer">
+															<div class="cantPasajeroslabel">
+															Niños (2 -11)
+															</div>
+															<div class="cantPasajeros">
+															<select name="Pasajeros" id="ninios">
+																<option value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+																<option value="6">6</option>
+																<option value="7">7</option> 
+																<option value="8">8</option> 
+																<option value="9">9</option>
+															</select>
+															</div>
+														</div>
+														<div class="pasaContainer">
+															<div class="cantPasajeroslabel">
+															Bebés (0-2)
+															</div>
+															<div class="cantPasajeros">
+															<select name="Pasajeros" id="bebes">
+																<option value="0">0</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																
+															</select>
+															</div>
+														</div>
+													</div>
+													<div class="claseContainer">
+															<div class="claseLabel">
+																Clase
+															</div>
+															<div class="classOpt">
+																<select name="claseOpciones" id="clase">
+																	<option value="Económica">Económica</option>
+																	<option value="Buisness">Buisness</option>
+																</select>
+															</div>
+													</div>
+											   </div>
+											 </div>
+										</div>						
+											
+									</div>	
+									<div class="inputPasajeros-Mobile" >
+								
+										<div class="modal-content">
+											<label>Pasajeros </label>
+											<div class="datosPasajeros">
+												<div class="pasaContainer">
+													<div class="cantPasajeroslabel">
+													Adultos (+11)
+													</div>
+													<div class="cantPasajeros">
+													<select name="Pasajeros" id="mayores">
+														<option selected value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option> 
+														<option value="8">8</option> 
+														<option value="9">9</option>
+													</select>
+													</div>
+												</div>
+												<div class="pasaContainer">
+													<div class="cantPasajeroslabel">
+													Niños (2 -11)
+													</div>
+													<div class="cantPasajeros">
+													<select name="Pasajeros" id="ninios">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="7">7</option> 
+														<option value="8">8</option> 
+														<option value="9">9</option>
+													</select>
+													</div>
+												</div>
+												<div class="pasaContainer">
+													<div class="cantPasajeroslabel">
+													Bebés (0-2)
+													</div>
+													<div class="cantPasajeros">
+													<select name="Pasajeros" id="bebes">
+														<option value="0">0</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														
+													</select>
+													</div>
+												</div>
+											</div>
+											
+									    </div>
+									    <div class="opcionesBusqueda">
+											<div class="containerGeneralOP">
+												<div class="opcionesClases">
+													<label>Clase </label>
+													<div class="opcion">
+														<input  id="i3" class="botonIdaYVuelta"  type="radio" checked>
+														<label for="i3" class="labelBefore" >	
+														<span>Económica</span>
+														</label>
+													</div>
+													<div class="opcion">
+														<input id="i4"  class="btnSoloIda"  type="radio" >
+														<label for="i4" class="labelBefore">
+															<span>Buisness</span>
+														</label>							
+													</div>
+												</div>	
+											</div>	
+										</div>
+									</div> 
+								</div>	 		
+								<div class="inputsearch">
+									<button type="submit" class="searchButton">
+										Buscar
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>	
+				</div>
+			</div>	
+		</div>
+	</div>
+		
+
+<script  src="js/code.js">
+
+</script>
+
+</body>
+
+</script>
+
+</body>
+	
+</html>
